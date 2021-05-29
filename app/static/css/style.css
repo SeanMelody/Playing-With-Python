@@ -1,5 +1,6 @@
 body {
-background-color: aqua;
+background: linear-gradient(yellow, red);
+height: 2000px;
 }
 
 .jumbotron-style {
