@@ -4,19 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% if title %}
+    <!-- {% if title %}
     <title>{{ title }} - Playing with Python</title>
     {% else %}
     <title>Welcome to Playing with Python!</title>
-    {% endif %}
+    {% endif %} -->
+    <title>TEST</title>
 </head>
 <body>
-    <h1>Hello, {{ user.username }}!</h1>
+
 
     <button>Generate a Password</button>
 
 
-
+<form action="/new-password/">
+    <input type="submit" value="Click me">
+</form>
+<!-- <button> <a href="/new-password/">Click me</a></button> -->
 
     <h4>{{password}}</h4>
 

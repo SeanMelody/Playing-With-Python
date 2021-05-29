@@ -4,10 +4,19 @@ import random
 import string
 
 @app.route('/')
-@app.route('/index')
+
+def index():
+        return render_template("index.html")
+
+
+
+
+
+@app.route('/new-password/')
+def new_password():
 # def index():
 #     return "Hello, World!"
-def index():
+# def index():
 
         characters = string.ascii_letters + string.punctuation + string.digits
 
@@ -18,11 +27,12 @@ def index():
 
         print("hello world")
 
-        user = {'username': 'Arya'}
+        # user = {'username': 'Arya'}
 
 
 
 
 
-        
-        return render_template('index.html', title='Home', user=user, password=password)
+        return password
+
+        # return render_template('index.html', title='Home', user=user, password=password)
