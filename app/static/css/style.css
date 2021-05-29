@@ -4,12 +4,17 @@ height: 2000px;
 }
 
 .jumbotron-style {
-    background-color: aqua;
+    background-color: white;
 }
 
 .card {
     height: 250px;
     width: 400px;
+}
+
+.special {
+    height: 250px;
+    width: 800px;
 }
 
 .margin100 {
