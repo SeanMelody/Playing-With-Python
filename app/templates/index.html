@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap Link-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
     <title>Python Password Generator</title>
 </head>
+
 <body>
 
-<h1 class="jumbotron">Python Password Generator</h1>
-<form action="/new-password/">
-    <input type="submit" value="Click me">
-</form>
-<!-- <button> <a href="/new-password/">Click me</a></button> -->
+    <header class="jumbotron text-center">
+        <h1>Python Password Generator</h1>
+    </header>
 
-    <h4>{{password}}</h4>
-
+    <div class="container">
+        <form action="/new-password/" class="row justify-content-center">
+            <input type="submit" value="Generate your new password" class="btn-lg btn-primary col-md-3">
+        </form>
+    </div>
 </body>
+
 </html>
