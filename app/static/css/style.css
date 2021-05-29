@@ -1,0 +1,20 @@
+body {
+background-color: aqua;
+}
+
+.jumbotron-style {
+    background-color: aqua;
+}
+
+.card {
+    height: 250px;
+    width: 400px;
+}
+
+.margin100 {
+    margin: 100px;
+}
+
+.margin10 {
+    margin: 10px;
+}
