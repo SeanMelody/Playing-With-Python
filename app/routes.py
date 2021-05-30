@@ -1,7 +1,8 @@
-from flask import render_template
+from flask import render_template, request
 from app import app
 import random
 import string
+enctype = "multipart/form-data"
 
 
 @app.route('/')
@@ -24,11 +25,25 @@ def new_password():
 # @app.route("/custom-password", methods=["POST"])
 
 
-@app.route("/custom-password")
+@app.route("/custom-password/", methods=["POST"])
 def custom_password():
+
+    lengthSel = request.form["lengthSel"]
+
+    lenghtInt = int(lengthSel)
+
+    # capSel = request.form["capSel"]
+    # charSel = request.form["charSel"]
+    # numSel = request.form["numSel"]
 
     #     lengthSel = request.form["lengthSel"]
 
-    custom_password = "custom password will go here!"
+    custom_password = "Your custom password is: "
 
-    return render_template("custom-password.html", password=custom_password)
+    charactersCust = string.ascii_letters + string.punctuation + string.digits
+
+    passwordCust = "".join(random.sample(charactersCust, lenghtInt))
+
+    return render_template("custom-password.html", password2=passwordCust, password=custom_password, length=lengthSel)
+
+    #  length=lengthSel, capitals=capSel, characters=charSel, numbers=numSel
