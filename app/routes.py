@@ -43,37 +43,7 @@ def custom_password():
     return render_template("custom-password.html", password=passwordCust, password_desc=password_desc)
 
 
-@app.route("/custom-test/", methods=["POST"])
+@app.route("/custom-test/")
 def custom_test():
 
-    lengthSel = "10"
-    capSel = "A"
-    charSel = "B"
-    numSel = "C"
-
-    lengthSel = request.form["lengthSel"]
-    # capSel = request.form["capSel"]
-
-    lenghtInt = int(lengthSel)
-
-    capSel = request.form["capSel"]
-    charSel = request.form["charSel"]
-    numSel = request.form["numSel"]
-
-    # testSel = request.form["testSel"]
-
-    # test = "unchecked"
-
-    # if testSel:
-    #     test = "checked"
-    #     lengthSel = request.form["lengthSel"]
-
-    custom_password = "Your custom password is: "
-
-    charactersCust = string.ascii_letters + string.punctuation + string.digits
-
-    passwordCust = "".join(random.sample(charactersCust, lenghtInt))
-
-    return render_template("custom-test.html", password2=passwordCust, password=custom_password, capitals=capSel, characters=charSel, numbers=numSel, length=lengthSel)
-
-    #  length=lengthSel, capitals=capSel, characters=charSel, numbers=numSel, test=test
+    return render_template("custom-test.html")
