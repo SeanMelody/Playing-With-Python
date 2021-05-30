@@ -28,21 +28,19 @@ def new_password():
 @app.route("/custom-password/", methods=["POST"])
 def custom_password():
 
-    lengthSel = "10"
+    lengthSel = "0"
 
     lengthSel = request.form["lengthSel"]
 
     lenghtInt = int(lengthSel)
 
-    custom_password = "Your custom password is: "
+    password_desc = "Your custom password is: "
 
     charactersCust = string.ascii_letters + string.punctuation + string.digits
 
     passwordCust = "".join(random.sample(charactersCust, lenghtInt))
 
-    return render_template("custom-password.html", password2=passwordCust, password=custom_password)
-
-    #  length=lengthSel, capitals=capSel, characters=charSel, numbers=numSel, test=test
+    return render_template("custom-password.html", password=passwordCust, password_desc=password_desc)
 
 
 @app.route("/custom-test/", methods=["POST"])
